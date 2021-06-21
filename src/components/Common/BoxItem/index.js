@@ -86,9 +86,10 @@ margin: 5px 5px 15px 5px;
 padding:5px;
 background-color: ${props => props.theme.background};
 box-shadow: -7px 7px 19px -12px rgba(0,0,0,0.75);
+animation: fadeIn 1s;
 
 &.delete {
-  animation: smallAndHide 1s linear;
+  animation: smallAndHide .8s linear;
 }
 
 .post {
@@ -141,6 +142,16 @@ box-shadow: -7px 7px 19px -12px rgba(0,0,0,0.75);
   }
   100% {
     transform: scale(0) rotate(85deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 `
