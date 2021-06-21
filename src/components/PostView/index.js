@@ -36,7 +36,7 @@ class PostView extends Component {
         <div className="media-container">
           {this.isImage(selected.url) ?
             (<img alt={selected.title} src={selected.url} style={{ width: '100%' }} />) :
-            (<a className="open-browser" href={selected.url} target="_blank">open in brownser</a>)}
+            (<a className="open-browser" href={selected.url} target="_blank" rel="noreferrer">open in brownser</a>)}
 
           {selected.secure_media?.reddit_video && (
             <video width="320" height="240" controls>
